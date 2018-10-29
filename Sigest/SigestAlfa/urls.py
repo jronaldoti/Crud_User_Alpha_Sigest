@@ -17,14 +17,13 @@ from django.contrib import admin
 from django.urls import path,include
 from funcoes import urls as funcoes_urls
 from usuarios import urls as usuarios_urls
-from tipos import urls as tipos_urls
-from prioridades import urls as prioridades_urls
+from tarefas import urls as tarefas_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('funcoes/', include(funcoes_urls)),
     path('usuarios/',include(usuarios_urls)),
-    path('tipos/',include(tipos_urls)),
-    path('prioridades/',include(prioridades_urls)),
+    path('tarefas/', include(tarefas_urls)),
+
 
 ]
