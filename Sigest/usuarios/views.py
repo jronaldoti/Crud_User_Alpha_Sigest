@@ -18,8 +18,8 @@ class UsuarioDetail(DetailView):
 
 class UsuarioCreate(CreateView):
     model = Usuario
-    fields = ['username', 'password','funcao','matricula']
-    success_url = '/usuarios/listar_usuario'
+    fields = ['username', 'password','email','funcao', 'matricula']
+    success_url = reverse_lazy('login')
 
 class UsuarioUpdate(UpdateView):
     model = Usuario
